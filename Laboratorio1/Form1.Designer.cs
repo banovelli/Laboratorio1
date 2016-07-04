@@ -142,7 +142,6 @@
             this.ApostadorLbl.Size = new System.Drawing.Size(30, 13);
             this.ApostadorLbl.TabIndex = 4;
             this.ApostadorLbl.Text = "João";
-            this.ApostadorLbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -152,6 +151,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Aposta";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numericUpDown1
             // 
@@ -183,7 +183,6 @@
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "reais no cão número";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // numericUpDown2
             // 
