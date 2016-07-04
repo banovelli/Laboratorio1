@@ -41,6 +41,7 @@ namespace Laboratorio1
             //retorna verdadeiro se tme din suficiente
             if(Cash > 4){
                 MyBet = new Bet() { Amount = Amount, Dog = Dog, Bettor = this };
+                Cash -= Amount;
                 return true;
             }
             return false;

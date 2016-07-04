@@ -47,8 +47,33 @@ namespace Laboratorio1
             return someGreyHound;
         }
 
+        private void fazerAposta(Guy someGuy)
+        {
+            if (someGuy.MyBet != null)
+            {
+                MessageBox.Show("Você já apostou!!", "Atenção");
+            }
+            if (!someGuy.PlaceBet((int)numericUpDown1.Value, (int)numericUpDown2.Value))
+            {
+                MessageBox.Show("Você está sem dinehiro para apostar!!");
+            }
+            someGuy.UpdateLabels();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            if (JoaoRdb.Checked)
+            {
+                fazerAposta(guyJoao);
+            }
+            if (BetoRdb.Checked)
+            {
+                fazerAposta(guyBeto);
+            }
+            if (AlfredoRbd.Checked)
+            {
+                fazerAposta(guyAlfredo);
+            }
 
         }
     }
