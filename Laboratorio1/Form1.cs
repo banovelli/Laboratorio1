@@ -21,6 +21,9 @@ namespace Laboratorio1
         GreyHound greyHound3;
         GreyHound greyHound4;
 
+        int raceTrackLength = 433;
+        int startingPosition = 22;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +45,7 @@ namespace Laboratorio1
 
         private GreyHound initializeGreyHound(PictureBox pictureBox)
         {
-            GreyHound someGreyHound = new GreyHound() { StartingPosition = 22, RaceTrackLength = 433, MyPictureBox = pictureBox};
+            GreyHound someGreyHound = new GreyHound() { StartingPosition = startingPosition, RaceTrackLength = raceTrackLength, MyPictureBox = pictureBox };
             someGreyHound.takeStartingPosition();
             return someGreyHound;
         }
@@ -75,6 +78,43 @@ namespace Laboratorio1
                 fazerAposta(guyAlfredo);
             }
 
+        }
+
+        private void runBtn_Click(object sender, EventArgs e)
+        {
+            
+            //corrida maluca
+        while (greyHound1.Location < raceTrackLength || 
+                greyHound2.Location < raceTrackLength || 
+                greyHound3.Location < raceTrackLength || 
+                greyHound4.Location < raceTrackLength
+            )
+            {
+              greyHound1.Run();
+              greyHound2.Run();
+              greyHound3.Run();
+              greyHound4.Run();
+            }
+
+            //vencedor???
+            int Winner = Math.Max(greyHound1.Location, Math.Max(greyHound2.Location, Math.Max(greyHound3.Location, greyHound4.Location)));
+
+            MessageBox.Show("O vencedor foi o número" + Winner, "Cachorro vencedor");
+
+            //atualizo dindin dos apsotadores
+            guyJoao.Collet(Winner);
+            guyBeto.Collet(Winner);
+            guyAlfredo.Collet(Winner);
+
+            //limpo apostas
+            guyJoao.clearBet();
+            guyBeto.clearBet();
+            guyAlfredo.clearBet();
+
+            //atualizo info dos apostadores
+            guyJoao.UpdateLabels();
+            guyBeto.UpdateLabels();
+            guyAlfredo.UpdateLabels();           
         }
     }
 }

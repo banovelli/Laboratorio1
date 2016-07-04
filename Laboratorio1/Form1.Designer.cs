@@ -137,6 +137,7 @@
             this.runBtn.TabIndex = 9;
             this.runBtn.Text = "Corram!";
             this.runBtn.UseVisualStyleBackColor = true;
+            this.runBtn.Click += new System.EventHandler(this.runBtn_Click);
             // 
             // numericUpDown2
             // 
