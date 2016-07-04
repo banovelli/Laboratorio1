@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +22,7 @@ namespace Laboratorio1
         GreyHound greyHound3;
         GreyHound greyHound4;
 
-        int raceTrackLength = 433;
+        int raceTrackLength = 405;
         int startingPosition = 22;
 
         public Form1()
@@ -30,11 +31,11 @@ namespace Laboratorio1
             guyJoao = initializeGuy("João", 50, JoaoRdb, ApostaJoaoLbl); 
             guyBeto = initializeGuy("Beto", 75, BetoRdb, ApostaBetoLbl);
             guyAlfredo = initializeGuy("Alfredo", 45, AlfredoRbd, ApostaAlfredoLbl);
-
-            greyHound1 = initializeGreyHound(dogPicUm);
-            greyHound2 = initializeGreyHound(dogPicDois);
-            greyHound3 = initializeGreyHound(dogPicTres);
-            greyHound4 = initializeGreyHound(dogPicQuatro);
+        
+            greyHound1 = initializeGreyHound(dogPicUm, 27);
+            greyHound2 = initializeGreyHound(dogPicDois,25);
+            greyHound3 = initializeGreyHound(dogPicTres, 21);
+            greyHound4 = initializeGreyHound(dogPicQuatro, 23);
         }
 
         private Guy initializeGuy(string Name, int Cash, RadioButton radioButton, Label label){
@@ -43,10 +44,11 @@ namespace Laboratorio1
             return someGuy;
         }
 
-        private GreyHound initializeGreyHound(PictureBox pictureBox)
+        private GreyHound initializeGreyHound(PictureBox pictureBox, int seed)
         {
             GreyHound someGreyHound = new GreyHound() { StartingPosition = startingPosition, RaceTrackLength = raceTrackLength, MyPictureBox = pictureBox };
             someGreyHound.takeStartingPosition();
+            someGreyHound.MyRandom = new Random(seed);
             return someGreyHound;
         }
 
@@ -77,34 +79,61 @@ namespace Laboratorio1
             {
                 fazerAposta(guyAlfredo);
             }
-
         }
 
-        private void runBtn_Click(object sender, EventArgs e)
+        private void executaCorrida()
         {
-            
+            button1.Enabled = false;
+            runBtn.Enabled = false;
             //corrida maluca
-        while (greyHound1.Location < raceTrackLength || 
-                greyHound2.Location < raceTrackLength || 
-                greyHound3.Location < raceTrackLength || 
-                greyHound4.Location < raceTrackLength
-            )
+            while ((greyHound1.Location < raceTrackLength) ||
+                    (greyHound2.Location < raceTrackLength) ||
+                    (greyHound3.Location < raceTrackLength) ||
+                    (greyHound4.Location < raceTrackLength)
+                )
             {
-              greyHound1.Run();
-              greyHound2.Run();
-              greyHound3.Run();
-              greyHound4.Run();
+                greyHound1.Run();
+                greyHound2.Run();
+                greyHound3.Run();
+                greyHound4.Run();
+                Application.DoEvents();
+                Thread.Sleep(10);
             }
+        }
+
+        private int verificaVencedor()
+        {
+             int[] posicoes = new int[4] { greyHound1.Location, greyHound2.Location, greyHound3.Location, greyHound4.Location };
 
             //vencedor???
-            int Winner = Math.Max(greyHound1.Location, Math.Max(greyHound2.Location, Math.Max(greyHound3.Location, greyHound4.Location)));
+            int Winner = 0;
+            int localizacao = posicoes[0];
+            for (int i = 1; i < posicoes.Length; i++){
+                if(localizacao < posicoes[i]){
+                    localizacao = posicoes[i];
+                    Winner = i;
+                }
+            }
+            return Winner+1;
+        }
 
-            MessageBox.Show("O vencedor foi o número" + Winner, "Cachorro vencedor");
-
+           //to Do quebrar esse metodo em outros para cada um cuidar de uma parte!!!
+        private void atualizaCorrida(int Winner)
+        {
             //atualizo dindin dos apsotadores
-            guyJoao.Collet(Winner);
-            guyBeto.Collet(Winner);
-            guyAlfredo.Collet(Winner);
+            if (guyJoao.MyBet != null)
+            {
+                guyJoao.Collet(Winner);
+            }
+            if (guyBeto.MyBet != null)
+            {
+                guyBeto.Collet(Winner);
+            }
+            if (guyAlfredo.MyBet != null)
+            {
+                guyAlfredo.Collet(Winner);
+            }
+            
 
             //limpo apostas
             guyJoao.clearBet();
@@ -114,7 +143,26 @@ namespace Laboratorio1
             //atualizo info dos apostadores
             guyJoao.UpdateLabels();
             guyBeto.UpdateLabels();
-            guyAlfredo.UpdateLabels();           
+            guyAlfredo.UpdateLabels();
+
+            greyHound1.takeStartingPosition();
+            greyHound2.takeStartingPosition();
+            greyHound3.takeStartingPosition();
+            greyHound4.takeStartingPosition();
+
+            button1.Enabled = true;
+            runBtn.Enabled = true;
+        }
+
+        private void runBtn_Click(object sender, EventArgs e)
+        {
+            executaCorrida();
+
+            int Winner = verificaVencedor();
+
+            MessageBox.Show("O vencedor foi o número " + (Winner), "Cachorro vencedor");
+
+            atualizaCorrida(Winner);      
         }
     }
 }

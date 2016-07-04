@@ -13,12 +13,12 @@ namespace Laboratorio1
         public int StartingPosition;
         public int RaceTrackLength;
         public PictureBox MyPictureBox = null;
-        public int Location = 0;
-        public Random MyRandom = new Random();
+        public int Location = 22;
+        public Random MyRandom;
 
         public bool Run(){
             //move de 1 a 4 espaços
-            int distancia = MyRandom.Next(4);
+            int distancia = MyRandom.Next(1,5);
 
             Point p = MyPictureBox.Location;
             p.X += distancia;
@@ -26,7 +26,8 @@ namespace Laboratorio1
             Location = p.X;
 
             //update posicção caixa de netrada
-            if(p.X > RaceTrackLength){
+            if (Location >= RaceTrackLength)
+            {
                 return true;
             }
             
@@ -39,6 +40,7 @@ namespace Laboratorio1
             Point p = MyPictureBox.Location;
             p.X = StartingPosition;
             MyPictureBox.Location = p;
+            Location = 22;
         }
     }
 }

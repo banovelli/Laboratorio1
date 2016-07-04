@@ -26,7 +26,7 @@ namespace Laboratorio1
         {
             if (Winner == Dog)
             {
-                return Amount * 2;
+                return Amount;
             }
             else
             {

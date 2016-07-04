@@ -39,12 +39,17 @@ namespace Laboratorio1
         {
             //crie uma nova aposta e armazene no campo belt
             //retorna verdadeiro se tme din suficiente
-            if(Cash > 4){
+            if (Cash > 4)
+            {
                 MyBet = new Bet() { Amount = Amount, Dog = Dog, Bettor = this };
-            //    Cash -= Amount;
+                //    Cash -= Amount;
                 return true;
             }
-            return false;
+            else
+            {
+                clearBet();
+                return false;
+            }
         }
 
         public void Collet(int Winner)

@@ -257,7 +257,7 @@
             // dogPicUm
             // 
             this.dogPicUm.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicUm.Location = new System.Drawing.Point(427, 21);
+            this.dogPicUm.Location = new System.Drawing.Point(436, 24);
             this.dogPicUm.Name = "dogPicUm";
             this.dogPicUm.Size = new System.Drawing.Size(64, 39);
             this.dogPicUm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,7 +267,7 @@
             // dogPicDois
             // 
             this.dogPicDois.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicDois.Location = new System.Drawing.Point(146, 87);
+            this.dogPicDois.Location = new System.Drawing.Point(22, 86);
             this.dogPicDois.Name = "dogPicDois";
             this.dogPicDois.Size = new System.Drawing.Size(64, 39);
             this.dogPicDois.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -287,7 +287,7 @@
             // dogPicQuatro
             // 
             this.dogPicQuatro.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicQuatro.Location = new System.Drawing.Point(306, 233);
+            this.dogPicQuatro.Location = new System.Drawing.Point(22, 234);
             this.dogPicQuatro.Name = "dogPicQuatro";
             this.dogPicQuatro.Size = new System.Drawing.Size(64, 39);
             this.dogPicQuatro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -306,7 +306,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Corrida Maluca";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
