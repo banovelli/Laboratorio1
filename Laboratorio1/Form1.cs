@@ -16,18 +16,35 @@ namespace Laboratorio1
         Guy guyBeto;
         Guy guyAlfredo;
 
+        GreyHound greyHound1;
+        GreyHound greyHound2;
+        GreyHound greyHound3;
+        GreyHound greyHound4;
+
         public Form1()
         {
             InitializeComponent();
             guyJoao = initializeGuy("João", 50, JoaoRdb, ApostaJoaoLbl); 
             guyBeto = initializeGuy("Beto", 75, BetoRdb, ApostaBetoLbl);
             guyAlfredo = initializeGuy("Alfredo", 45, AlfredoRbd, ApostaAlfredoLbl);
+
+            greyHound1 = initializeGreyHound(dogPicUm);
+            greyHound2 = initializeGreyHound(dogPicDois);
+            greyHound3 = initializeGreyHound(dogPicTres);
+            greyHound4 = initializeGreyHound(dogPicQuatro);
         }
 
         private Guy initializeGuy(string Name, int Cash, RadioButton radioButton, Label label){
             Guy someGuy = new Guy { Name = Name, MyBet = null, Cash = Cash, MyRadioButton = radioButton, MyLabel = label };
             someGuy.UpdateLabels();
             return someGuy;
+        }
+
+        private GreyHound initializeGreyHound(PictureBox pictureBox)
+        {
+            GreyHound someGreyHound = new GreyHound() { StartingPosition = 22, RaceTrackLength = 433, MyPictureBox = pictureBox};
+            someGreyHound.takeStartingPosition();
+            return someGreyHound;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -30,28 +30,28 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.JoaoRdb = new System.Windows.Forms.RadioButton();
-            this.BetoRdb = new System.Windows.Forms.RadioButton();
-            this.AlfredoRbd = new System.Windows.Forms.RadioButton();
-            this.ApostadorLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.runBtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ApostaJoaoLbl = new System.Windows.Forms.Label();
-            this.ApostaBetoLbl = new System.Windows.Forms.Label();
             this.ApostaAlfredoLbl = new System.Windows.Forms.Label();
+            this.ApostaBetoLbl = new System.Windows.Forms.Label();
+            this.ApostaJoaoLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.runBtn = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ApostadorLbl = new System.Windows.Forms.Label();
+            this.AlfredoRbd = new System.Windows.Forms.RadioButton();
+            this.BetoRdb = new System.Windows.Forms.RadioButton();
+            this.JoaoRdb = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.dogPicUm = new System.Windows.Forms.PictureBox();
             this.dogPicDois = new System.Windows.Forms.PictureBox();
             this.dogPicTres = new System.Windows.Forms.PictureBox();
             this.dogPicQuatro = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicUm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicDois)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicTres)).BeginInit();
@@ -91,98 +91,52 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Balcão de Apostas";
             // 
-            // label1
+            // ApostaAlfredoLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aposta Mínima";
+            this.ApostaAlfredoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ApostaAlfredoLbl.Location = new System.Drawing.Point(325, 108);
+            this.ApostaAlfredoLbl.Name = "ApostaAlfredoLbl";
+            this.ApostaAlfredoLbl.Size = new System.Drawing.Size(200, 15);
+            this.ApostaAlfredoLbl.TabIndex = 13;
+            this.ApostaAlfredoLbl.Text = "Alfredo ainda não apostou.";
             // 
-            // JoaoRdb
+            // ApostaBetoLbl
             // 
-            this.JoaoRdb.AutoSize = true;
-            this.JoaoRdb.Location = new System.Drawing.Point(6, 60);
-            this.JoaoRdb.Name = "JoaoRdb";
-            this.JoaoRdb.Size = new System.Drawing.Size(48, 17);
-            this.JoaoRdb.TabIndex = 1;
-            this.JoaoRdb.TabStop = true;
-            this.JoaoRdb.Text = "João";
-            this.JoaoRdb.UseVisualStyleBackColor = true;
+            this.ApostaBetoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ApostaBetoLbl.Location = new System.Drawing.Point(325, 85);
+            this.ApostaBetoLbl.Name = "ApostaBetoLbl";
+            this.ApostaBetoLbl.Size = new System.Drawing.Size(200, 15);
+            this.ApostaBetoLbl.TabIndex = 12;
+            this.ApostaBetoLbl.Text = "Beto ainda não apostou.";
             // 
-            // BetoRdb
+            // ApostaJoaoLbl
             // 
-            this.BetoRdb.AutoSize = true;
-            this.BetoRdb.Location = new System.Drawing.Point(6, 83);
-            this.BetoRdb.Name = "BetoRdb";
-            this.BetoRdb.Size = new System.Drawing.Size(47, 17);
-            this.BetoRdb.TabIndex = 2;
-            this.BetoRdb.TabStop = true;
-            this.BetoRdb.Text = "Beto";
-            this.BetoRdb.UseVisualStyleBackColor = true;
+            this.ApostaJoaoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ApostaJoaoLbl.Location = new System.Drawing.Point(325, 60);
+            this.ApostaJoaoLbl.Name = "ApostaJoaoLbl";
+            this.ApostaJoaoLbl.Size = new System.Drawing.Size(200, 15);
+            this.ApostaJoaoLbl.TabIndex = 11;
+            this.ApostaJoaoLbl.Text = "João ainda não apostou.";
             // 
-            // AlfredoRbd
+            // label4
             // 
-            this.AlfredoRbd.AutoSize = true;
-            this.AlfredoRbd.Location = new System.Drawing.Point(6, 106);
-            this.AlfredoRbd.Name = "AlfredoRbd";
-            this.AlfredoRbd.Size = new System.Drawing.Size(58, 17);
-            this.AlfredoRbd.TabIndex = 3;
-            this.AlfredoRbd.TabStop = true;
-            this.AlfredoRbd.Text = "Alfredo";
-            this.AlfredoRbd.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(322, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Apostas";
             // 
-            // ApostadorLbl
+            // runBtn
             // 
-            this.ApostadorLbl.AutoSize = true;
-            this.ApostadorLbl.Location = new System.Drawing.Point(7, 148);
-            this.ApostadorLbl.Name = "ApostadorLbl";
-            this.ApostadorLbl.Size = new System.Drawing.Size(30, 13);
-            this.ApostadorLbl.TabIndex = 4;
-            this.ApostadorLbl.Text = "João";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(53, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Aposta";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(134, 141);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(72, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "reais no cão número";
+            this.runBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runBtn.Location = new System.Drawing.Point(437, 128);
+            this.runBtn.Name = "runBtn";
+            this.runBtn.Size = new System.Drawing.Size(88, 33);
+            this.runBtn.TabIndex = 9;
+            this.runBtn.Text = "Corram!";
+            this.runBtn.UseVisualStyleBackColor = true;
             // 
             // numericUpDown2
             // 
@@ -206,57 +160,103 @@
             0,
             0});
             // 
-            // runBtn
+            // label3
             // 
-            this.runBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.runBtn.Location = new System.Drawing.Point(437, 128);
-            this.runBtn.Name = "runBtn";
-            this.runBtn.Size = new System.Drawing.Size(88, 33);
-            this.runBtn.TabIndex = 9;
-            this.runBtn.Text = "Corram!";
-            this.runBtn.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(212, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "reais no cão número";
             // 
-            // label4
+            // numericUpDown1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(322, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Apostas";
+            this.numericUpDown1.Location = new System.Drawing.Point(134, 141);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(72, 20);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
-            // ApostaJoaoLbl
+            // button1
             // 
-            this.ApostaJoaoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ApostaJoaoLbl.Location = new System.Drawing.Point(325, 60);
-            this.ApostaJoaoLbl.Name = "ApostaJoaoLbl";
-            this.ApostaJoaoLbl.Size = new System.Drawing.Size(200, 15);
-            this.ApostaJoaoLbl.TabIndex = 11;
-            this.ApostaJoaoLbl.Text = "João ainda não apostou.";
+            this.button1.Location = new System.Drawing.Point(53, 138);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Aposta";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ApostaBetoLbl
+            // ApostadorLbl
             // 
-            this.ApostaBetoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ApostaBetoLbl.Location = new System.Drawing.Point(325, 85);
-            this.ApostaBetoLbl.Name = "ApostaBetoLbl";
-            this.ApostaBetoLbl.Size = new System.Drawing.Size(200, 15);
-            this.ApostaBetoLbl.TabIndex = 12;
-            this.ApostaBetoLbl.Text = "Beto ainda não apostou.";
+            this.ApostadorLbl.AutoSize = true;
+            this.ApostadorLbl.Location = new System.Drawing.Point(7, 148);
+            this.ApostadorLbl.Name = "ApostadorLbl";
+            this.ApostadorLbl.Size = new System.Drawing.Size(30, 13);
+            this.ApostadorLbl.TabIndex = 4;
+            this.ApostadorLbl.Text = "João";
             // 
-            // ApostaAlfredoLbl
+            // AlfredoRbd
             // 
-            this.ApostaAlfredoLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ApostaAlfredoLbl.Location = new System.Drawing.Point(325, 108);
-            this.ApostaAlfredoLbl.Name = "ApostaAlfredoLbl";
-            this.ApostaAlfredoLbl.Size = new System.Drawing.Size(200, 15);
-            this.ApostaAlfredoLbl.TabIndex = 13;
-            this.ApostaAlfredoLbl.Text = "Alfredo ainda não apostou.";
+            this.AlfredoRbd.AutoSize = true;
+            this.AlfredoRbd.Location = new System.Drawing.Point(6, 106);
+            this.AlfredoRbd.Name = "AlfredoRbd";
+            this.AlfredoRbd.Size = new System.Drawing.Size(58, 17);
+            this.AlfredoRbd.TabIndex = 3;
+            this.AlfredoRbd.TabStop = true;
+            this.AlfredoRbd.Text = "Alfredo";
+            this.AlfredoRbd.UseVisualStyleBackColor = true;
+            // 
+            // BetoRdb
+            // 
+            this.BetoRdb.AutoSize = true;
+            this.BetoRdb.Location = new System.Drawing.Point(6, 83);
+            this.BetoRdb.Name = "BetoRdb";
+            this.BetoRdb.Size = new System.Drawing.Size(47, 17);
+            this.BetoRdb.TabIndex = 2;
+            this.BetoRdb.TabStop = true;
+            this.BetoRdb.Text = "Beto";
+            this.BetoRdb.UseVisualStyleBackColor = true;
+            // 
+            // JoaoRdb
+            // 
+            this.JoaoRdb.AutoSize = true;
+            this.JoaoRdb.Location = new System.Drawing.Point(6, 60);
+            this.JoaoRdb.Name = "JoaoRdb";
+            this.JoaoRdb.Size = new System.Drawing.Size(48, 17);
+            this.JoaoRdb.TabIndex = 1;
+            this.JoaoRdb.TabStop = true;
+            this.JoaoRdb.Text = "João";
+            this.JoaoRdb.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Aposta Mínima";
             // 
             // dogPicUm
             // 
             this.dogPicUm.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicUm.Location = new System.Drawing.Point(22, 22);
+            this.dogPicUm.Location = new System.Drawing.Point(427, 21);
             this.dogPicUm.Name = "dogPicUm";
             this.dogPicUm.Size = new System.Drawing.Size(64, 39);
             this.dogPicUm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,7 +266,7 @@
             // dogPicDois
             // 
             this.dogPicDois.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicDois.Location = new System.Drawing.Point(22, 86);
+            this.dogPicDois.Location = new System.Drawing.Point(146, 87);
             this.dogPicDois.Name = "dogPicDois";
             this.dogPicDois.Size = new System.Drawing.Size(64, 39);
             this.dogPicDois.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +276,7 @@
             // dogPicTres
             // 
             this.dogPicTres.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicTres.Location = new System.Drawing.Point(22, 166);
+            this.dogPicTres.Location = new System.Drawing.Point(183, 163);
             this.dogPicTres.Name = "dogPicTres";
             this.dogPicTres.Size = new System.Drawing.Size(64, 39);
             this.dogPicTres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,7 +286,7 @@
             // dogPicQuatro
             // 
             this.dogPicQuatro.Image = global::Laboratorio1.Properties.Resources.dog;
-            this.dogPicQuatro.Location = new System.Drawing.Point(22, 234);
+            this.dogPicQuatro.Location = new System.Drawing.Point(306, 233);
             this.dogPicQuatro.Name = "dogPicQuatro";
             this.dogPicQuatro.Size = new System.Drawing.Size(64, 39);
             this.dogPicQuatro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -309,8 +309,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicUm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicDois)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dogPicTres)).EndInit();
