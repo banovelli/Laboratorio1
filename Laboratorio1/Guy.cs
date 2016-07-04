@@ -16,16 +16,8 @@ namespace Laboratorio1
         public RadioButton MyRadioButton;
         public Label MyLabel;
         public void UpdateLabels(){
-
             MyRadioButton.Text = Name + " tem " + Cash + " reais.";
-            if (MyBet.Amount)
-            {
-                MyLabel.Text = MyBet.GetDescription();
-            }
-            else{
-                MyLabel.Text = Name + "ainda não apostou";
-            }
-            
+            MyLabel.Text = MyBet.GetDescription();           
             //decrição  da aposta
             //o dinheiro atual
         }
@@ -41,7 +33,7 @@ namespace Laboratorio1
             //crie uma nova aposta e armazene no campo belt
             //retorna verdadeiro se tme din suficiente
             if(Cash > 4){
-                MyBet = new Bet(Amount = Amount, Dog = Dog, Guy = this);
+                MyBet = new Bet(Amount = Amount, Dog = Dog, this);
             }
             return false;
         }
@@ -49,7 +41,7 @@ namespace Laboratorio1
         public void Collet(int Winner)
         {
             //cobre aposta se ganhei
-            Cash += Bet.PayOut(Winner);            
+            Cash += MyBet.PayOut(Winner);            
         }
     }
 }
